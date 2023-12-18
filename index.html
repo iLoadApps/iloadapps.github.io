@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0;url=/iLoadApps/index.html">
+    <title>iLoadApps Website Launch</title>
+    <script>
+        // Function to redirect the user to the appropriate page after the opening date
+        function redirectAfterOpening() {
+            var currentDate = new Date();
+            var openingDate = new Date("2024-01-01"); // 01/01/2024
+
+            if (currentDate < openingDate) {
+                // Show the message if the website has not opened yet
+                alert("The iLoadApps website will launch on 01/01/2024. Please come back on that date!");
+            } else {
+                // Redirect the user to the index page after the opening date
+                window.location.href = "/iLoadApps/index.html";
+            }
+        }
+    </script>
 </head>
-<body>
-    <p>If you are not redirected, <a href="/iLoadApps/index.html">click here</a>.</p>
+<body onload="redirectAfterOpening()">
+    <h1>Welcome to iLoadApps</h1>
+    <p>The iLoadApps website will launch on 01/01/2024. Please come back on that date for access to the content.</p>
 </body>
 </html>
