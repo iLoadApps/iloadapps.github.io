@@ -19,8 +19,12 @@
             height: 100vh;
         }
 
-        h1, p {
+        h1, p, #discord-link {
             margin: 10px;
+        }
+
+        #discord-link a {
+            color: #7289DA; /* Discord color */
         }
     </style>
     <script>
@@ -40,5 +44,9 @@
 <body onload="redirectAfterOpening()">
     <h1>Welcome to iLoadApps</h1>
     <p>The iLoadApps website will launch on 01/01/2024. Please come back on that date for access to the content.</p>
+    <div id="discord-link">
+        <p>Want to know more? Join our Discord server!</p>
+        <a href="https://dsc.gg/iloadapps" target="_blank">https://dsc.gg/iloadapps</a>
+    </div>
 </body>
 </html>
