@@ -4,19 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iLoadApps Website Launch</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/RYy7Mmg.png">
+    <style>
+        body {
+            font-family: 'Lack', sans-serif;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1, p {
+            margin: 10px;
+        }
+    </style>
     <script>
         // Function to redirect the user to the appropriate page after the opening date
         function redirectAfterOpening() {
             var currentDate = new Date();
             var openingDate = new Date("2024-01-01"); // 01/01/2024
 
-            if (currentDate < openingDate) {
-                // Show the message if the website has not opened yet
-                alert("The iLoadApps website will launch on 01/01/2024. Please come back on that date!");
-            } else {
+            if (currentDate >= openingDate) {
                 // Redirect the user to the index page after the opening date
                 window.location.href = "/iLoadApps/index.html";
             }
+            // If it's not the opening date, the user will stay on this page.
         }
     </script>
 </head>
